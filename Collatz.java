@@ -18,14 +18,16 @@ public class Collatz {
                     n = 3 * n + 1;
                 }
                 steps++;
-                if (verbose) System.out.print(" " + n);
+                if (verbose){
+					System.out.print(" " + n);
+				}
             }
 			 if (verbose) {
                 System.out.println(" (" + steps + ")");
             }
 		}
-		 System.out.println("Every one of the first " + N +
-		" hailstone sequences reached 1.");
+	System.out.println("Every one of the first " + N +
+	" hailstone sequences reached 1.");
 	}
-
 }
+
