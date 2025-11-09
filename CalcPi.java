@@ -3,21 +3,13 @@ public class CalcPi {
 	public static void main(String [] args) { 
 		int num = Integer.parseInt(args[0]);
 		double sum = 0.0;
-		int diviser = 3;
-		boolean add = true;
-
-		for(int i = 1; i < num ; i++){
-			double fraction = 1.0 / diviser;
-			if(add == true){
-				sum = sum + fraction;
-			}else {
-				sum = sum - fraction;
+		    for (int i = 0; i < num; i++) {
+        		double term = Math.pow(-1, i) / (2.0 * i + 1.0);
+        		sum += term;
 			}
-			add =! add;
-			diviser = diviser + 2;
-		}
-		double approximated = (1 - sum) * 4;
-		System.out.println("pi, according to Java: " + Math.PI);
-		System.out.printf("pi, approximated:      %.15f%n", approximated);
+    	double approximated = 4.0 * sum;
+
+    	System.out.println("pi according to Java: " + Math.PI);
+    	System.out.println("pi, approximated:     " + approximated);
 	}
 }

@@ -11,7 +11,7 @@ public class Collatz {
 			if (verbose){
 				System.out.print(n);
 			}
-			while (n != 1) {
+			do{
                 if (n % 2 == 0) {
                     n = n / 2;
                 } else {
@@ -21,9 +21,10 @@ public class Collatz {
                 if (verbose){
 					System.out.print(" " + n);
 				}
-            }
-			 if (verbose) {
-                System.out.println(" (" + steps + ")");
+            }while(n != 1);
+
+			if (verbose) {
+            	System.out.println(" (" + steps + ")");
             }
 		}
 	System.out.println("Every one of the first " + N +
